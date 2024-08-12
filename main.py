@@ -47,6 +47,10 @@ def show_history(): #показать всю историю
         mb.showinfo("История", "История загрузок пуста")
         return
 
+    history_window = Toplevel(window)
+    history_window.title("История Загрузок")
+
+
     # Создаем два лист  бокса
     files_listbox = Listbox(history_window, width=50, height=20)
     files_listbox.grid(row=0, column=0, padx=(10, 0), pady=10)
@@ -66,7 +70,6 @@ window.geometry("360x100")
 
 button = ttk.Button(text="Загрузить файл", command=upload)
 button.pack()
-
 
 entry = ttk.Entry()
 entry.pack()
